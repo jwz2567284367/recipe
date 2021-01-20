@@ -1,0 +1,40 @@
+<view>
+  <block  wx:if="{{ lists.length>0 }}">
+    <view class="list" wx:for="{{ lists }}">
+       <image src="{{ item.pics[0].fileID }}" class="recipe-image" bindtap="_toDetailPage" data-title="{{item.recipename}}" data-id="{{ item._id }}"></image>
+       <!-- 基本信息 -->
+       <view class="list-info">
+          <view class="list-name">{{ item.recipename }}</view>
+          <view class="list-info-userinfo">
+            <image src="{{ item.userInfo.avatarUrl }}"></image>
+            <text>{{ item.userInfo.nickName }}</text>
+          </view>
+          <view class="xing">
+            <!-- 星星 -->
+            <image src="../../static/list/xing0.png" wx:if="{{ item.views<10 }}"></image>
+            <image src="../../static/list/xing1.png" wx:elif="{{ item.views>=10 && item.views<20 }}"></image>
+            <image src="../../static/list/xing2.png" wx:elif="{{ item.views>=20 && item.views<30 }}"></image>
+            <image src="../../static/list/xing3.png" wx:elif="{{item.views>=30 && item.views<40 }}"></image>
+            <image src="../../static/list/xing4.png" wx:elif="{{ item.views>=40 && item.views<60 }}"></image>
+            <image src="../../static/list/xing5.png" wx:else></image>
+          </view>
+          <view class="number">
+            <view>  
+              <image src="../../static/list/followed.png"></image>
+              <text>{{ item.follow }}</text>
+            </view>
+            <view>
+              <image src="../../static/list/airs.png"></image>
+              <text>{{ item.views }}</text> 
+            </view>
+          </view>
+       </view>
+    </view>
+    <view class="bottom" wx:if="{{ isOff }}">
+    已经没有数据啦！
+    </view>
+  </block>
+  <view class="bottom" wx:else >
+ 当前类别下暂无数据！
+  </view>
+</view>

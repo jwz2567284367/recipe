@@ -1,0 +1,31 @@
+<view class='adminPerson'>
+	<!-- 动漫分类列表 (动漫分类列表) -->
+	<view class='cpfllb'>
+		<view  wx:for="{{types}}">
+			<text class="txt">{{item.typeName}} </text>
+			<text class="btn" style="background:#f1613c" bindtap="_delType" data-id="{{item._id}}">删除</text>
+			<text class="btn" style="background:#4578ff" bindtap="_updType" data-index="{{index}}">修改</text>
+    </view>
+    
+		</view>
+	<!--    页面 （动漫添加分类） -->
+	<view class='cptjfl'>
+
+		<mp-cell prop="mobile" ext-class=" weui-cell_vcode">
+			<!-- 输入动漫分类 -->
+			<input class="weui-input" placeholder="输入动漫分类" model:value="{{addVal}}" />
+			<view slot="footer" class="weui-vcode-btn" bindtap="_addType">添加</view>
+		</mp-cell>
+	</view>
+	<!-- 修改页面  （动漫修改分类）-->
+	<view class='cpxgfl'>
+
+		<mp-cell prop="mobile" ext-class=" weui-cell_vcode">
+			<!-- 输入菜谱分类 -->
+			<input  class="weui-input" model:value="{{updVal}}" placeholder="输入动漫分类" />
+			<view slot="footer" class="weui-vcode-btn" bindtap="_doUpdType">修改</view>
+		</mp-cell>
+
+	</view>
+
+</view>

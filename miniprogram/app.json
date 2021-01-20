@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/type/type",
+    "pages/list/list",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/pbrecipe/pbrecipe",
+    "pages/category/category"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#57b8d6",
+    "navigationBarTitleText": "动漫吧",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":"pages/index/index",
+        "iconPath": "tabs/index.png",
+        "selectedIconPath": "tabs/indexFull.png"
+      },
+      {
+        "text":"搜索",
+        "pagePath":"pages/search/search",
+        "iconPath": "tabs/cart.png",
+        "selectedIconPath": "tabs/cartFull.png"
+      },
+      {
+        "text":"我的",
+        "pagePath":"pages/my/my",
+        "iconPath": "tabs/my.png",
+        "selectedIconPath": "tabs/myFull.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon",
+    "mp-badge": "/miniprogram_npm/weui-miniprogram/badge/badge",
+    "my-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
+    "mp-slideview": "/miniprogram_npm/weui-miniprogram/slideview/slideview",
+    "mp-uploader": "/miniprogram_npm/weui-miniprogram/uploader/uploader"
+  }
+   
+}
